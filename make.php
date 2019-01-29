@@ -8,7 +8,7 @@ class MakeWebP {
   public $image = '';
 
   public function __construct(){
-    $this->url = $_SERVER['DOCUMENT_ROOT'].$_SERVER['REQUEST_URI'];
+    $this->url = urldecode($_SERVER['DOCUMENT_ROOT'].$_SERVER['REQUEST_URI']);
     $this->setOriginal();
     $this->convert();
   }
